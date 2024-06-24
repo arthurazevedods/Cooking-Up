@@ -5,16 +5,17 @@ import CardCategoria from './CardCategoria.vue';
 
 
 export default {
-    data(){
-        return{
+    data() {
+        return {
             categorias: [] as ICategoria[]
         }
     },
     //Método de ciclo de vida
-    async created(){
+    async created() {
         this.categorias = await obterCategorias();
     },
-    components: { CardCategoria }
+    components: { CardCategoria },
+    emits: ['adicionarIngrediente']
 }
 </script>
 
@@ -32,7 +33,10 @@ export default {
 
         <ul class="categorias">
             <li v-for="categoria in categorias" :key="categoria.nome">
-                <CardCategoria :categoria="categoria"/>
+                <CardCategoria 
+                    :categoria="categoria" 
+                    @adicionar-ingrediente="$emit('adicionarIngrediente',$emit)"
+                />
             </li>
         </ul>
 
