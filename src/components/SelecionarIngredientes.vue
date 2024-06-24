@@ -35,7 +35,7 @@ export default {
             <li v-for="categoria in categorias" :key="categoria.nome">
                 <CardCategoria 
                     :categoria="categoria" 
-                    @adicionar-ingrediente="$emit('adicionarIngrediente',$emit)"
+                    @adicionar-ingrediente="$emit('adicionarIngrediente',$event)"
                 />
             </li>
         </ul>

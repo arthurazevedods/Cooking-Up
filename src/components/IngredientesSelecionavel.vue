@@ -25,10 +25,10 @@ export default {
 </script>
 
 <template>
-    <!--@click="selecionado = !selecionado" -->
+    <!--v-on:click="aoClicar"" -->
     <button 
         class="ingrediente" 
-        v-on:click="aoClicar"
+        @click="aoClicar"
         :aria-pressed="selecionado"
     >
         <Tag :texto="ingrediente" :ativa="selecionado"/>
