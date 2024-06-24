@@ -3,6 +3,7 @@ import SelecionarIngredientes from './SelecionarIngredientes.vue';
 import SuaLista from './SuaLista.vue';
 import Tag from './Tag.vue';
 
+
 export default {
     data() {
         return {
@@ -26,8 +27,10 @@ export default {
     <main class="conteudo-principal">
         <SuaLista :ingredientes="ingredientes" />
 
-        <SelecionarIngredientes @adicionar-ingrediente="adicionarIngrediente"
-            @remover-ingrediente="removerIngrediente" />
+        <SelecionarIngredientes 
+            @adicionar-ingrediente="adicionarIngrediente"
+            @remover-ingrediente="removerIngrediente" 
+        />
     </main>
 </template>
 
