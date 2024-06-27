@@ -7,6 +7,7 @@ import BotaoPrincipal from './BotaoPrincipal.vue';
 
 
 export default {
+    name: 'SelecionarIngredientes',
     data() {
         return {
             categorias: [] as ICategoria[]
